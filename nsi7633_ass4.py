@@ -138,11 +138,8 @@ def generate_query(num_f,flag = True):
     for x in list_l:
         query1 += x + ","
     query1 = query1.strip(",")
-    #query = query1 + query2 + query3 + " <= " + str(ran_tuple)
-    #query = "SELECT hpi_flavor from data WHERE yr = "+str(ran_id)+" AND "+"period = "+str(ran_id2)
     query =  query1+ query2+ query3 +" = " +str(ran_id) + " LIMIT "+ran_tuple
     if flag == False:
-        #query = query1 + query2 + query3 + " = " + str(ran_id)
         query =  query1+ query2+ query3 +" = " +str(ran_id)+" AND "+"period = "+str(ran_id2)
     return query
 
@@ -160,14 +157,12 @@ def get_query(x,flag = True):
             break
     start_time = time.time()
     for item in querylist:
-        #print('{}'.format(item))
         r = c.execute(item)
         fetch = c.fetchall()
     stop_time = time.time()
     time_nomemc = stop_time - start_time
     start_time = time.time() 
     for item in querylist:
-        #print('{}'.format(item))
         memc(item)
     stop_time = time.time()
     time_memc = stop_time - start_time
