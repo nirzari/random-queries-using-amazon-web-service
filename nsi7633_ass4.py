@@ -19,7 +19,7 @@ from boto.s3.key import Key
 s3 = boto.connect_s3()
 
 #Establish connection with database
-connobj = MySQLdb.connect(host="awsdb.crtq9f6w5zvu.us-west-2.rds.amazonaws.com", user="nizi", passwd="Niziapp18!", db="aws_db")
+connobj = MySQLdb.connect(host="awsdb.crtq9f6w5zvu.us-west-2.rds.amazonaws.com", user="nizi", passwd="", db="aws_db")
 #Create cursor
 c = connobj.cursor()
 
