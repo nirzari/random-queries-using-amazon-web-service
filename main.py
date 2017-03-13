@@ -58,7 +58,7 @@ def insert_data():
                 break
             #insert the data    
             item.put()
-        print "Data inserted correctly" 
+        print "Data inserted successfully" 
         
     except Exception as e:
         print "Something wrong with data: " + str(e)
