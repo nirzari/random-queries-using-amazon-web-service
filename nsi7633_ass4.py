@@ -199,8 +199,6 @@ def main():
         print "With memcache " + str(query_time[1])
 
 #Call the main function 
-#import pdb
-#pdb.set_trace()         
 main()
 #Save the database changes
 connobj.commit()
